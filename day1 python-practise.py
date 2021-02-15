@@ -22,8 +22,7 @@ print("both:",both)
 
 
 #4 fizzbuzz
-for n in range(5):
-    num=int(input("Enter the number"))
+for num in range(51):
     if num % 3 == 0 and num % 5 == 0:
         print("fizzbuzz")
     elif num % 3 == 0:
