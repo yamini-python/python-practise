@@ -22,7 +22,7 @@ print("both:",both)
 
 
 #4 fizzbuzz
-for num in range(51):
+for num in range(1,51):
     if num % 3 == 0 and num % 5 == 0:
         print("fizzbuzz")
     elif num % 3 == 0:
