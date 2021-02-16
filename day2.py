@@ -46,7 +46,7 @@ else:
 
 #5
 
-def add(a,b):
+def add(a: int, b: int) -> int:
       """ give a and b as input...... 
 ....function returns sum of two values as output
 """
