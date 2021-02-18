@@ -92,7 +92,7 @@ try:
     print(a)
     
 except TypeError:
-    print("The Type of b should be integer")
+    print("The Type of b should be integer")    #if b='e'
 
 
  #8.KeyError
