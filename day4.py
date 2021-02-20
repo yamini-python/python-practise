@@ -14,8 +14,6 @@ class Reverse:
                 raise StopIteration
             self.index = self.index + 2
             return self.data[self.index]
-        except StopIteration:
-            print("No more iteration possible")
 
 rev = Reverse('hello')
 it = iter(rev)
@@ -49,7 +47,7 @@ for python in glob.iglob('**\*.py', recursive=True):
 
 #5
 import sys
-print(f"Aguments: {list(sys.argv)}")
+print(f"Aguments: {sys.argv}")
 
 #6
 import random
@@ -100,7 +98,7 @@ details={"abcd":1,"def":2,"fgh":3}
 try:
     print(details["abcd"])
     print(details["yamini"])
-except:
+except KeyError:
     print("Enter the correct key")
 
 #indexError
@@ -108,5 +106,5 @@ array=[1,2,3]
 try:
     print(array[1])
     print(array[5])
-except:
+except IndexError:
     print("Index out of bound")
