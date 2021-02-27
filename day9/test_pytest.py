@@ -1,4 +1,5 @@
 import pytest
+import math
 from doctestdemo import equals
 
 def test_equals():
@@ -44,4 +45,7 @@ def test_fixture(element1,element2):
 def test_equals(element1,element2, expected):
     assert equals(element1,element2) == expected
 
+def test_Exception():
+    with pytest.raises(TypeError):
+        math.sqrt("b") 
   
