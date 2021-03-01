@@ -9,7 +9,6 @@ from uuid import uuid4
 import jwt
 import datetime
 from functools import wraps
-import os
 
 
 app=Flask(__name__)
