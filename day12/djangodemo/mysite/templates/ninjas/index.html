@@ -11,7 +11,7 @@
 
             {% for dev in dev_list %}
             <tr>
-                <td>{{dev.devName}}</a></td>
+                <td><a href="{% url 'ninja:details' dev.id %}">{{dev.devName}}</a></td>
                 <td>{{ dev.experience }}</td>
                 <td>{{ dev.country }}</td>
             </tr>
