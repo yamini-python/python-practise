@@ -15,7 +15,7 @@ class DeveloperModelTests(TestCase):
 
     def test_200_details(self):
 
-        dev = Developer(name='Joe', experience=5, country='IND')
+        dev = Developer(name='yamini', experience=1, country='india')
         dev.save()
         url = reverse('ninjas:details', args=(dev.id,))
         response = self.client.get(url)
@@ -29,7 +29,7 @@ class DeveloperModelTests(TestCase):
 
     def test_all_dev(self):
         
-        dev = Developer(name='Joe', experience=5, country='IND')
+        dev = Developer(name='yamini', experience=1, country='india')
         dev.save()
         dev_list = Developer.objects.all()
         assert len(dev_list) == 1
@@ -38,13 +38,13 @@ class DeveloperModelTests(TestCase):
 class SkillModelTests(TestCase):
 
     def test_create_skill(self):
-        dev = Developer(name='Joe', experience=5, country='IND')
+        dev = Developer(name='yamini', experience=1, country='india')
         dev.save()
         skill = dev.skill_set.create(name='Java', level=1)
         assert skill.name == 'Java'
 
     def test_skill_of_dev(self):
-        dev = Developer(name='Joe', experience=5, country='IND')
+        dev = Developer(name='yamini', experience=1, country='india')
         dev.save()
         dev.skill_set.create(name='Java', level=1)
         dev.skill_set.create(name='Python', level=1)
@@ -52,7 +52,7 @@ class SkillModelTests(TestCase):
         assert len(dev_skill_list) == 2
 
     def test_level_up(self):
-        dev = Developer(name='Joe', experience=5, country='IND')
+        dev = Developer(name='yamini', experience=1, country='india')
         dev.save()
         dev.skill_set.create(name='Java', level=1)
         dev.skill_set.create(name='Python', level=1)
